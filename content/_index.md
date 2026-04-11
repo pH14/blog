@@ -6,7 +6,7 @@ lang = "en"
 footer = true
 
 name = "Occasional writings from Paul"
-bio = "Hi! Despite the picture, I am not actually a dog. You are likely to find some writings about distributed systems and databases here. "
+bio = "Welcome. Despite the picture, I am not actually a dog. You are likely to find some writings about distributed systems and databases here."
 avatar = "img/avatar.jpeg"
 links = [
     { name = "LinkedIn", icon = "linkedin", url = "https://www.linkedin.com/in/paulhemberger/" },
