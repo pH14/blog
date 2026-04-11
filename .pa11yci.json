@@ -1,0 +1,10 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 5000
+  },
+  "urls": [
+    "http://localhost:1111/",
+    "http://localhost:1111/posts/"
+  ]
+}

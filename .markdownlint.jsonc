@@ -1,0 +1,11 @@
+{
+  "default": true,
+  // Line length - disable for blog posts
+  "MD013": false,
+  // Inline HTML - Zola shortcodes produce inline HTML
+  "MD033": false,
+  // Bare URLs - common in blogs
+  "MD034": false,
+  // First line must be a heading - Zola front matter comes first
+  "MD041": false
+}
