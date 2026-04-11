@@ -1,5 +1,5 @@
 +++
-title = "Improving Reliability: Building a Vitess Balancer to Minimize MySQL Downtime"
+title = "Building a Vitess Balancer to Minimize MySQL Downtime"
 date = 2022-01-13
 description = "On automated balancing of Vitess / MySQL workloads."
 

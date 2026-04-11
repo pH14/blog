@@ -71,7 +71,7 @@ section.lang }}{% endif %}{% endblock lang %} {% block title %}{{ config.title
                     {% endif %}
                 </div>
                 {% if section.extra.bio %}
-                <div id="bio">{{ section.extra.bio }}</div>
+                <div id="bio">{{ section.extra.bio | safe }}</div>
                 {% endif %}
             </div>
         </section>
