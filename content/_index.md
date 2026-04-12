@@ -5,7 +5,7 @@ template = "home.html"
 lang = "en"
 footer = true
 
-name = "Occasional writings from Paul Hemberger"
+name = "Paul Hemberger"
 bio = "Welcome. Despite the picture, I am not actually a dog. You are likely to find some writings about distributed systems and databases here."
 avatar = "img/avatar.jpeg"
 links = [

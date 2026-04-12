@@ -11,7 +11,7 @@ generate_feeds = false
 lang = "en"
 
 title = "Posts"
-subtitle = "Blog posts blog posts blog posts"
+subtitle = ""
 
 date_format = "%b %-d, %Y"
 
