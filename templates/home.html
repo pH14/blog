@@ -159,11 +159,13 @@ section.lang }}{% endif %}{% endblock lang %} {% block title %}{{ config.title
                 </a>
                 {% endif %} {% endfor %}
             </div>
+            {% if blog_section.pages | length > section.extra.recent_max %}
             <div class="read-more">
                 <a class="instant" href="{{ config.extra.blog_section_path }}"
                     >{{ section.extra.recent_more_text }}</a
                 >
             </div>
+            {% endif %}
         </section>
         {% endif %}
     </main>
