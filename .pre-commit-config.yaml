@@ -46,6 +46,16 @@ repos:
         pass_filenames: false
         stages: [pre-push]
 
+  # Render D2 diagrams to SVG
+  - repo: local
+    hooks:
+      - id: d2-render
+        name: render d2 diagrams
+        entry: bash -c 'make diagrams && git add static/img/diagrams/'
+        language: system
+        pass_filenames: false
+        files: '\.d2$'
+
   # Basic file hygiene
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
