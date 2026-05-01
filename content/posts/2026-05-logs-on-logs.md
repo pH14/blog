@@ -1,5 +1,5 @@
 +++
-title = "The Log Log: A Log About Building Logs on Logs"
+title = "A Log of Building Logs on Logs"
 date = 2026-05-01
 description = "Don't worry, it'll all make sense by the time we get to the part about sharding shards across shards."
 
