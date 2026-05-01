@@ -130,11 +130,28 @@
         opacity: 0.7;
     }
 
-    /* ----- Post layout: TOC on left so sidenotes get the right margin ----- */
+    /* ----- Asymmetric post layout: drop the symmetric left gutter so the
+       right gutter has enough room for sidenotes at narrower viewports.
+       Wrapper is centered with a max-width on wide screens; on narrow
+       ones it fills, and main shrinks before sidenotes drop to mobile. ----- */
 
     @media (min-width: 1025px) {
         body.post #wrapper {
-            flex-direction: row-reverse;
+            max-width: 1100px;
+            margin: 0 auto;
+            justify-content: flex-start;
+        }
+        body.post #wrapper #blank {
+            display: none;
+        }
+        body.post #wrapper main {
+            flex: 1 1 auto;
+            margin: 0;
+            width: auto;
+        }
+        body.post #wrapper aside {
+            width: 260px;
+            flex-shrink: 0;
         }
     }
 
@@ -175,9 +192,8 @@
         margin-right: 0.3em;
     }
 
-    /* Desktop: sidenotes in the right margin
-       (need viewport >= main-max-width + 2 * sidenote gutter so they don't overflow) */
-    @media (min-width: 1360px) {
+    /* Desktop: sidenotes in the right margin */
+    @media (min-width: 1025px) {
         .sidenote {
             display: block;
             float: right;
@@ -193,7 +209,7 @@
     }
 
     /* Mobile: always visible as inline paragraph */
-    @media (max-width: 1359px) {
+    @media (max-width: 1024px) {
         .sidenote {
             display: block;
             float: none;

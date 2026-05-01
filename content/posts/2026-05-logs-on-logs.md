@@ -4,7 +4,7 @@ date = 2026-05-01
 description = "Don't worry, it'll all make sense by the time we get to the part about sharding shards across shards."
 
 [extra]
-toc = true
+toc = false
 comment = false
 +++
 
