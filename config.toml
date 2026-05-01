@@ -14,6 +14,9 @@ generate_feeds = true
 feed_filenames = ["feed.xml"]
 taxonomies = [{ name = "tags" }, { name = "categories" }]
 
+[link_checker]
+skip_anchor_prefixes = ["https://github.com/"]
+
 [markdown]
 render_emoji = false
 external_links_target_blank = true
