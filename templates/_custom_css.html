@@ -23,8 +23,8 @@
         --primary-pale-color: #6f8fd166;
         --primary-decoration-color: #6f8fd112;
         --bg-color: #1c1c1c;
-        --text-color: #c1c1c1;
-        --text-pale-color: #848484;
+        --text-color: #dcdcdc;
+        --text-pale-color: #9a9a9a;
         --text-decoration-color: #5f5f5f;
         --highlight-mark-color: #8296cb3b;
 
@@ -57,6 +57,57 @@
         --detail-border-color: var(--primary-color);
     }
 
+    /* ----- Tighter heading spacing ----- */
+
+    article.prose :is(h1, h2, h3, h4, h5, h6) {
+        margin-top: 1.25em;
+        margin-bottom: 0.5em;
+    }
+
+    article.prose :is(h1, h2, h3, h4, h5, h6) + * {
+        margin-top: 0.5em;
+    }
+
+    article.prose :is(p, ul, ol):has(+ :is(h1, h2, h3, h4, h5, h6)) {
+        margin-bottom: 0.75em;
+    }
+
+    /* ----- Tighter gap between paragraph and following list ----- */
+
+    article.prose p:has(+ :is(ul, ol)) {
+        margin-bottom: 0.5em;
+    }
+
+    article.prose p + :is(ul, ol) {
+        margin-top: 0.5em;
+    }
+
+    /* ----- List markers ----- */
+
+    article.prose li::marker {
+        color: var(--text-color);
+    }
+
+    /* ----- Diagram images ----- */
+
+    figure img[src*="/diagrams/"] {
+        border-radius: 8px;
+    }
+
+    body.dark .prose figure img[src*="/diagrams/"] {
+        filter: none;
+    }
+
+    /* ----- Post description subtitle ----- */
+
+    .post-description {
+        font-size: 1.1em;
+        color: var(--text-pale-color);
+        font-style: italic;
+        margin-top: -0.5em;
+        margin-bottom: 1em;
+    }
+
     /* ----- External link posts ----- */
 
     .external-post {
@@ -67,6 +118,14 @@
         font-style: italic;
         font-size: 0.85em;
         opacity: 0.7;
+    }
+
+    /* ----- Post layout: TOC on left so sidenotes get the right margin ----- */
+
+    @media (min-width: 1025px) {
+        body.post #wrapper {
+            flex-direction: row-reverse;
+        }
     }
 
     /* ----- Sidenotes (Tufte-style) ----- */
