@@ -1,5 +1,5 @@
 +++
-title = "On AI, Part I: Learning to Throw it All Away"
+title = "Learning to Throw it All Away"
 date = 2026-04-12
 description = "Some early thoughts on learning to throw away what I know and what I do"
 
