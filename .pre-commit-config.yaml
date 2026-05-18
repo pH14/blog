@@ -14,7 +14,7 @@ repos:
     rev: v0.17.2
     hooks:
       - id: markdownlint-cli2
-        args: ["content/**/*.md"]
+        files: ^content/.*\.md$
 
   # HTML/CSS formatting
   - repo: https://github.com/pre-commit/mirrors-prettier
